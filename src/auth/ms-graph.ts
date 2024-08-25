@@ -1,5 +1,4 @@
 import { headers } from 'next/headers'
-import { requestOboToken } from '@navikt/oasis'
 import { logger } from '@navikt/next-logger'
 
 import { isLocal } from '../utils/env'
@@ -14,7 +13,8 @@ export async function getMembersOf(): Promise<
         return fakeMembersOfResponse
     }
 
-    const token = getUserToken(headers())
+    throw Error("Integration with azure entra ID not configured yet")
+    /* const token = getUserToken(headers())
     const tokenSet = await requestOboToken(token, 'https://graph.microsoft.com/.default')
     if (!tokenSet.ok) {
         logger.error(new Error(`Unable to exchange OBO token: ${tokenSet.error.message}`, { cause: tokenSet.error }))
@@ -35,7 +35,7 @@ export async function getMembersOf(): Promise<
         }
     }
 
-    return response.json()
+    return response.json() */
 }
 
 export type MsGraphGroup = {
