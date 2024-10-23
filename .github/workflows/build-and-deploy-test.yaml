@@ -5,10 +5,10 @@ on:
     paths-ignore:
     - '**README.md'
     branches:
-      - main
+      - remove-navit-oauth
   workflow_dispatch:
     branches:
-      - main
+      - remove-navit-oauth
 
 env:
   IMAGE_TAG: plattform.azurecr.io/helsesjekk-bot/test

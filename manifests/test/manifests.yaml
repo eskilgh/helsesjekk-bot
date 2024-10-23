@@ -18,13 +18,12 @@ kind: Deployment
 metadata:
   labels:
     app: helsesjekk-bot
-    my-label: example
   name: helsesjekk-bot
   annotations:
     nrk/criticality: "4"
     nrk/documentation: "https://github.com/nrkno/helsesjekk-bot"
     nrk/alert-treshold-max-unavailable-replicas: "50%"
-    nrk/ignore-monitoring: "false"
+    nrk/ignore-monitoring: "true"
 spec:
   replicas: 1
   strategy:
@@ -53,12 +52,32 @@ spec:
           resources:
             limits:
               cpu: 200m
-              memory: 256Mi
+              memory: 512Mi
             requests:
               cpu: 100m
-              memory: 256Mi
+              memory: 512Mi
           securityContext:
             readOnlyRootFilesystem: true
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /api/internal/is_alive
+          port: 3000
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /api/internal/is_ready
+          port: 3000
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
 ---
 # Source: generic-app/templates/ingress.yaml
 apiVersion: networking.k8s.io/v1
