@@ -1,0 +1,59 @@
+kubernetesDeployType: deployment
+
+appName: helsesjekk-bot
+appPort: 3000
+
+annotations:
+  alertThreshold: "50%"
+  documentationURL: "https://github/nrkno/helsesjekk-bot"
+  githubRepo: "https://github/nrkno/helsesjekk-bot"
+  slackContact: "#innlogging"
+  slackNotification: ""
+  onCallNotifications: "disabled"
+  criticality: 4
+
+resources:
+  test:
+    limits:
+      cpu: "256m"
+      memory: "512Mi"
+    requests:
+      cpu: "128m"
+      memory: "512Mi"
+
+replicas:
+  test: 1
+
+autoScaling:
+  test:
+    enabled: false
+
+readinessProbe:
+  enabled: true
+  probeType: "http"
+  failureThreshold: 3
+  initialDelaySeconds: 15
+  path: "/api/internal/is_ready"
+  periodSeconds: 5
+  successThreshold: 2
+  timeoutSeconds: 1
+
+livenessProbe:
+  enabled: true
+  probeType: "http"
+  failureThreshold: 3
+  initialDelaySeconds: 15
+  path: "/api/internal/is_alive"
+  periodSeconds: 5
+  successThreshold: 2
+  timeoutSeconds: 1  
+
+startupProbe:
+  enabled: false
+
+ingress:
+  enabled: true
+  ssoEnabled: true
+
+nrknoIngress:
+  enabled: false
