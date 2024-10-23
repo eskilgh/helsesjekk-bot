@@ -1,0 +1,52 @@
+trigger:
+  branches:
+    include:
+    - remove-navit-oauth
+
+resources:
+  repositories:
+    - repository: 'templateRepo'
+      name: 'nrkno/innlogging-pipeline-templates'
+      type: github
+      endpoint: GitHub (nrkjenkins1)
+      ref: main
+
+pool:
+  name: "Innlogging"
+
+variables:
+  - template: variables.yml@templateRepo
+  - name: versionPrefix
+    value: "0.0.1"
+
+stages:
+  - stage: HelsesjekkBot
+    jobs:
+      - template: azure-devops-build-deploy-kubernetes.yaml@templateRepo
+        parameters:
+          dotnet: 
+            enabled: false
+          nodeVersion: "20.x"
+          pnpm:
+            - script: npm install --global yarn
+              displayName: "NPM install Yarn"
+            - script: yarn install
+              displayName: "Yarn install"
+              env:
+                GITHUB_PACKAGES_TOKEN: $(GITHUB_PACKAGES_TOKEN)
+            # - script: yarn lint
+            #   displayName: "Yarn lint"
+            #   env:
+            #     GITHUB_PACKAGES_TOKEN: $(GITHUB_PACKAGES_TOKEN)
+            - script: yarn build
+              displayName: "Yarn build"
+              env:
+                GITHUB_PACKAGES_TOKEN: $(GITHUB_PACKAGES_TOKEN)
+                NEXT_PUBLIC_ENVIRONMENT: dev
+          extraDockerBuildArguments: "--build-arg GITHUB_PACKAGES_TOKEN='$(GITHUB_PACKAGES_TOKEN)'"
+          environments:
+            - name: test
+              deployToEnvironment: true
+              namespace: 'helsesjekk-bot'
+              clusters:
+                - aks-inn-cdn-nonprod-eno

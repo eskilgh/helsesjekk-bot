@@ -11,6 +11,8 @@ COPY yarn.lock /app/
 COPY prisma /app/prisma
 
 ENV NODE_ENV=production
+ARG GITHUB_PACKAGES_TOKEN=""
+ENV GITHUB_PACKAGES_TOKEN=$GITHUB_PACKAGES_TOKEN
 
 RUN yarn workspaces focus -A --production
 RUN yarn prisma:generate
@@ -36,6 +38,8 @@ COPY public /app/public/
 COPY .next /app/.next
 
 ENV NODE_ENV=production
+ARG GITHUB_PACKAGES_TOKEN=""
+ENV GITHUB_PACKAGES_TOKEN=$GITHUB_PACKAGES_TOKEN
 
 EXPOSE 3000
 
