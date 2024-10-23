@@ -1,0 +1,27 @@
+trigger:
+  branches:
+    include:
+    - remove-navit-oauth
+
+resources:
+  repositories:
+    - repository: 'templateRepo'
+      name: 'nrkno/innlogging-pipeline-templates'
+      type: github
+      endpoint: GitHub (nrkjenkins1)
+      ref: main
+
+pool:
+  name: "Innlogging"
+
+stages:
+  - stage: HelsesjekkBot
+    jobs:
+      - template: azure-devops-build-deploy-kubernetes.yaml@templateRepo
+        parameters:
+          environments:
+            - name: test
+              deployToEnvironment: true
+              namespace: 'helsesjekk-bot'
+              clusters:
+                - aks-inn-cdn-nonprod-eno
