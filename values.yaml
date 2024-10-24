@@ -57,3 +57,25 @@ ingress:
 
 nrknoIngress:
   enabled: false
+
+environmentVariables:
+  - name: NAIS_DATABASE_HELSESJEKK_BOT_HELSESJEKK_BOT_URL
+    valueFrom:
+      secretKeyRef:
+        name: helsesjekk-db
+        key: url
+  - name: SLACK_SIGNING_SECRET
+    valueFrom:
+      secretKeyRef:
+        name: helsesjekk-slack
+        key: secret
+  - name: SLACK_BOT_TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: helsesjekk-slack
+        key: bot-token
+  - name: SLACK_APP_TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: helsesjekk-slack
+        key: app-token
