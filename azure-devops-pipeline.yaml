@@ -22,6 +22,8 @@ stages:
     jobs:
       - template: azure-devops-build-deploy-kubernetes.yaml@templateRepo
         parameters:
+          dotnet: 
+            enabled: false
           environments:
             - name: test
               deployToEnvironment: true
