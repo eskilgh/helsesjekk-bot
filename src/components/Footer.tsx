@@ -21,7 +21,7 @@ function Footer(): ReactElement {
                     vedlikehold gjort av Påloggingsteamet.
                 </Heading>
                 <BodyShort>
-                    Feedback og bugs kan rapporteres på slack på{' '}
+                    Tilbakemeldinger og feil kan rapporteres på slack på{' '}
                     <a
                         href="https://nrk.enterprise.slack.com/archives/C07TCLY8T2Q"
                         target="_blank"
