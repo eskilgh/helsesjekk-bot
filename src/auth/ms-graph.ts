@@ -1,10 +1,12 @@
-import { headers } from 'next/headers'
-import { logger } from '@navikt/next-logger'
+// import { headers } from 'next/headers'
+// import { logger } from '@navikt/next-logger'
 
 import { isLocal } from '../utils/env'
 
 import { fakeMembersOfResponse } from './fake-members-of-response'
-import { getUserToken } from './authentication'
+// import { getUserToken } from './authentication'
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 export async function getMembersOf(): Promise<
     MsGraphGroupsResponse | { error: string; status?: number; statusText?: string }
@@ -13,7 +15,8 @@ export async function getMembersOf(): Promise<
         return fakeMembersOfResponse
     }
 
-    throw Error("Integration with azure entra ID not configured yet")
+    // TODO: integrate with entra ID
+    return fakeMembersOfResponse
     /* const token = getUserToken(headers())
     const tokenSet = await requestOboToken(token, 'https://graph.microsoft.com/.default')
     if (!tokenSet.ok) {
