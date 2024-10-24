@@ -23,7 +23,7 @@ export function createRootPostBlocks(teamName: string, dateForWeek: Date, invali
             type: 'header',
             text: {
                 type: 'plain_text',
-                text: `:health: Det er på tide med helsesjekk uke ${getWeekNumber(
+                text: `:nrklogohjerte: Det er på tide med helsesjekk uke ${getWeekNumber(
                     dateForWeek,
                 )} for ${teamName}! :wave:`,
                 emoji: true,
@@ -71,7 +71,7 @@ export function createCompletedBlocks(responses: number, dateForWeek: Date): (Kn
             type: 'header',
             text: {
                 type: 'plain_text',
-                text: `:health: Takk for at du svarte på helsesjekken for uke ${getWeekNumber(
+                text: `:nrklogohjerte: Takk for at du svarte på helsesjekken for uke ${getWeekNumber(
                     dateForWeek,
                 )}! Denne er nå stengt. :lock:`,
                 emoji: true,

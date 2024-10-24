@@ -17,18 +17,18 @@ function Footer(): ReactElement {
             />
             <div className="pl-4 mt-4">
                 <Heading size="medium" level="2">
-                    Helsesjekk er utviklet og vedlikeholdt av Team Sykmelding.
+                    Helsesjekk er basert på åpen kildekode originalt utviklet av NAV. For NRK er utvikling og vedlikehold gjort av Påloggingsteamet.
                 </Heading>
                 <BodyShort>
                     Feedback og bugs kan rapporteres på slack på{' '}
-                    <a href="https://nav-it.slack.com/archives/C04LCPR5E12" target="_blank" rel="noopener noreferrer">
+                    <a href="https://nrk.enterprise.slack.com/archives/C07TCLY8T2Q" target="_blank" rel="noopener noreferrer">
                         #helsesjekk-bot
                     </a>
                 </BodyShort>
                 <BodyShort>
                     Kildekoden er tilgjengelig på{' '}
-                    <a href="https://github.com/navikt/helsesjekk-bot" target="_blank" rel="noopener noreferrer">
-                        github.com/navikt/helsesjekk-bot
+                    <a href="https://github.com/nrkno/helsesjekk-bot" target="_blank" rel="noopener noreferrer">
+                        github.com/nrkno/helsesjekk-bot
                     </a>
                 </BodyShort>
             </div>

@@ -3,5 +3,5 @@ export function createPermalink(channelId: string, ts: string): string {
 }
 
 export function createChannelPermalink(channelId: string): string {
-    return `https://nav-it.slack.com/archives/${channelId}`
+    return `https://nrk.enterprise.slack.com/archives/${channelId}`
 }

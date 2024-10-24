@@ -8,15 +8,15 @@ import { getGlobalScoreTimeline } from '../../db/score'
 import GlobalScoreGraph from '../../components/graphs/GlobalScoreGraph'
 
 export const metadata: Metadata = {
-    title: 'Helsesjekk | Helse i NAV',
-    description: 'Graf over helsen i hele NAV',
+    title: 'Helsesjekk | Helse i NRK',
+    description: 'Graf over helsen i hele NRK',
 }
 
 function Page(): ReactElement {
     return (
         <div>
             <BackLink href="/" />
-            <Heading size="large">Helse hele NAV</Heading>
+            <Heading size="large">Helse hele NRK</Heading>
             <Suspense
                 fallback={
                     <div className="w-full aspect-video">
