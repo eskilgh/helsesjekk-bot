@@ -15,7 +15,7 @@ function Header(): ReactElement {
                     <Image className="w-auto" src={logo} alt="" aria-hidden width={64} />
                     <div className="pl-4">
                         <Heading size="large">Helsesjekk</Heading>
-                        <Detail>En helsesjekk-bot for ditt autonome team</Detail>
+                        <Detail>En helsesjekk-bot for måling av teamets helse</Detail>
                     </div>
                 </Link>
                 <div>

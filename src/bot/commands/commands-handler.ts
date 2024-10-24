@@ -16,7 +16,7 @@ export function configureCommandsHandler(app: App): void {
             if (groupId.length === 0) {
                 await ack()
                 await respond({
-                    text: 'Du må skrive inn en ad-gruppe etter kommandoen. :meow_sob:',
+                    text: 'Du må skrive inn en ad-gruppe etter kommandoen. :bonk:',
                 })
                 return
             }
@@ -37,7 +37,7 @@ export function configureCommandsHandler(app: App): void {
             )
             await ack()
             await respond({
-                text: 'Ser ut som du prøver å ta i bruk helsesjekk i en kanal hvor jeg ikke er lagt til. :meow-shocked: Kan du legge meg til som en integrasjon først? :smile:',
+                text: 'Ser ut som du prøver å ta i bruk helsesjekk i en kanal hvor jeg ikke er lagt til. :meow_shocked: Kan du legge meg til som en integrasjon først? :smile:',
             })
             return
         }
