@@ -43,6 +43,7 @@ stages:
               env:
                 GITHUB_PACKAGES_TOKEN: $(GITHUB_PACKAGES_TOKEN)
                 NEXT_PUBLIC_ENVIRONMENT: dev
+          extraDockerBuildArguments: "--build-arg GITHUB_PACKAGES_TOKEN='$(GITHUB_PACKAGES_TOKEN)'"
           environments:
             - name: test
               deployToEnvironment: true

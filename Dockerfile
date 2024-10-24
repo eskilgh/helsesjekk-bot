@@ -12,12 +12,6 @@ COPY prisma /app/prisma
 
 ENV NODE_ENV=production
 
-RUN --mount=type=secret,id=GITHUB_PACKAGES_USER --mount=type=secret,id=GITHUB_PACKAGES_TOKEN \
-            export GITHUB_PACKAGES_USER=$(cat /run/secrets/GITHUB_PACKAGES_USER) \
-         && export GITHUB_PACKAGES_TOKEN=$(cat /run/secrets/GITHUB_PACKAGES_TOKEN)
-
-RUN echo $GITHUB_PACKAGES_USER
-
 RUN yarn workspaces focus -A --production
 RUN yarn prisma:generate
 
