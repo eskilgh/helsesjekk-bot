@@ -27,6 +27,8 @@ stages:
           dotnet: 
             enabled: false
           pnpm:
+            - script: npm install --global yarn
+              displayName: "NPM install Yarn"
             - script: yarn install
               displayName: "Yarn install"
             - script: yarn lint
