@@ -42,6 +42,7 @@ stages:
               displayName: "Yarn build"
               env:
                 NPM_AUTH_TOKEN: $(GITHUB_PACKAGES_TOKEN)
+                NEXT_PUBLIC_ENVIRONMENT: dev
           environments:
             - name: test
               deployToEnvironment: true
