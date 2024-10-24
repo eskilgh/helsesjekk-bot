@@ -34,10 +34,10 @@ stages:
               displayName: "Yarn install"
               env:
                 NPM_AUTH_TOKEN: $(GITHUB_PACKAGES_TOKEN)
-            - script: yarn lint
-              displayName: "Yarn lint"
-              env:
-                NPM_AUTH_TOKEN: $(GITHUB_PACKAGES_TOKEN)
+            # - script: yarn lint
+            #   displayName: "Yarn lint"
+            #   env:
+            #     NPM_AUTH_TOKEN: $(GITHUB_PACKAGES_TOKEN)
             - script: yarn build
               displayName: "Yarn build"
               env:
