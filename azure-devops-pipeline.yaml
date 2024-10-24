@@ -26,6 +26,7 @@ stages:
         parameters:
           dotnet: 
             enabled: false
+          nodeVersion: "20.x"
           pnpm:
             - script: npm install --global yarn
               displayName: "NPM install Yarn"
