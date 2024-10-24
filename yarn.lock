@@ -387,21 +387,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@navikt/aksel-icons@npm:^6.17.0":
+"@navikt/aksel-icons@npm:^6.16.0, @navikt/aksel-icons@npm:^6.17.0":
   version: 6.17.0
   resolution: "@navikt/aksel-icons@npm:6.17.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40navikt%2Faksel-icons%2F6.17.0%2F92f12f06c26db3c2221908da599a113654942044"
   checksum: 10/5a70f0705f71413f2ee397dd184c4b9bc3fc67d1206558885313727120aed52de592fe73f8e6333b76c81800bed60cc9a54af979aa8159d1de12d2e60c44cd2b
   languageName: node
   linkType: hard
 
-"@navikt/ds-css@npm:^6.17.0":
+"@navikt/ds-css@npm:^6.16.0":
   version: 6.17.0
   resolution: "@navikt/ds-css@npm:6.17.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40navikt%2Fds-css%2F6.17.0%2Fce84459723d9a8e88df82eb67dc77b05af5dd0de"
   checksum: 10/a2b9a1bad27820e4ffa9cfcac0cb38ce1fca5a9f4f5327947123ae5246362f893722e93abcb7024a0bb1aaec51319430bb522568a94449633a8edae401ecd253
   languageName: node
   linkType: hard
 
-"@navikt/ds-react@npm:^6.17.0":
+"@navikt/ds-react@npm:^6.16.0":
   version: 6.17.0
   resolution: "@navikt/ds-react@npm:6.17.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40navikt%2Fds-react%2F6.17.0%2F5353e0239dc0387ba796a67a0e764bfb88f30a48"
   dependencies:
@@ -419,7 +419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@navikt/ds-tailwind@npm:^6.17.0":
+"@navikt/ds-tailwind@npm:^6.16.0":
   version: 6.17.0
   resolution: "@navikt/ds-tailwind@npm:6.17.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40navikt%2Fds-tailwind%2F6.17.0%2F2395e7f207705192d3b2adf6954f2a84ee1a7efb"
   checksum: 10/8a85b689efadb638030c4859f4de9973c4bb2fb3f06831ecaa4313aead4e27da31fb909defc0173033af3fac19ad0796a4593641ceddb301937dbcd334130287
@@ -453,7 +453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@navikt/next-logger@npm:^1.31.0":
+"@navikt/next-logger@npm:^1.30.0":
   version: 1.32.0
   resolution: "@navikt/next-logger@npm:1.32.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40navikt%2Fnext-logger%2F1.32.0%2Fa1044dc4fa417a599f4805ea449c3a1ffebc4910"
   peerDependencies:
@@ -612,15 +612,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/client@npm:5.17.0":
-  version: 5.17.0
-  resolution: "@prisma/client@npm:5.17.0"
+"@prisma/client@npm:5.18.0":
+  version: 5.18.0
+  resolution: "@prisma/client@npm:5.18.0"
   peerDependencies:
     prisma: "*"
   peerDependenciesMeta:
     prisma:
       optional: true
-  checksum: 10/b6ee1cf6b43d3f0aa4cfd7977bf53e57ad68863875c97b09b15c6abc6c69e57afc99076e9e5390e4ea3d5777a8aeb6bbb92755ee6d165d77d741295c9dbe214f
+  checksum: 10/32a8156700f7d2acaf51b8f9343c37cb9fe7be504c95ae3b3dd529fc6636dd51e46b9029c77b7b143217ef1a6944ed9ab571719d20353f1ee19661be0a3562c6
   languageName: node
   linkType: hard
 
@@ -3704,13 +3704,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "helsesjekk@workspace:."
   dependencies:
-    "@navikt/aksel-icons": "npm:^6.17.0"
-    "@navikt/ds-css": "npm:^6.17.0"
-    "@navikt/ds-react": "npm:^6.17.0"
-    "@navikt/ds-tailwind": "npm:^6.17.0"
+    "@navikt/aksel-icons": "npm:^6.16.0"
+    "@navikt/ds-css": "npm:^6.16.0"
+    "@navikt/ds-react": "npm:^6.16.0"
+    "@navikt/ds-tailwind": "npm:^6.16.0"
     "@navikt/eslint-config-teamsykmelding": "npm:^6.6.0"
-    "@navikt/next-logger": "npm:^1.31.0"
-    "@prisma/client": "npm:5.17.0"
+    "@navikt/next-logger": "npm:^1.30.0"
+    "@prisma/client": "npm:5.18.0"
     "@slack/bolt": "npm:^3.21.1"
     "@slack/logger": "npm:^4.0.0"
     "@slack/types": "npm:^2.13.1"
