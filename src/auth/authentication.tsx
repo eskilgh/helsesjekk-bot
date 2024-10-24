@@ -9,17 +9,19 @@ import { raise } from '../utils/ts-utils'
 import { fakeToken } from './fake-token'
 import { getMembersOf } from './ms-graph'
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 /**
  * Validates the wonderwall token according to nais.io. Should only actually redirect if the token has expired.
  */
 export async function validateWonderwallToken(redirectPath: string): Promise<void> {
-    const requestHeaders = headers()
+    // const requestHeaders = headers()
 
     if (isLocal) {
         logger.warn('Is running locally, skipping RSC auth')
         return
     }
-    
+
     // const token = getToken(requestHeaders)
     // if (!token) {
     //     logger.warn('Found no token, redirecting to login, why was this not picked up by middleware.ts?')

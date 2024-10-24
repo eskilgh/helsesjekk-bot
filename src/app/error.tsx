@@ -24,7 +24,11 @@ export default function Error({ error, reset }: Props): ReactElement {
             </Heading>
             <BodyLong spacing>
                 Det har oppstått et intern feil i applikasjonen. Dersom feiler fortsetter si gjerne i fra på{' '}
-                <a href="https://nrk.enterprise.slack.com/archives/C07TCLY8T2Q" target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://nrk.enterprise.slack.com/archives/C07TCLY8T2Q"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     #helsesjekk-bot
                 </a>{' '}
                 så vi får fikset feilen raskest mulig.

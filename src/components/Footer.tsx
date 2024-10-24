@@ -17,11 +17,16 @@ function Footer(): ReactElement {
             />
             <div className="pl-4 mt-4">
                 <Heading size="medium" level="2">
-                    Helsesjekk er basert på åpen kildekode originalt utviklet av NAV. For NRK er utvikling og vedlikehold gjort av Påloggingsteamet.
+                    Helsesjekk er basert på åpen kildekode originalt utviklet av NAV. For NRK er utvikling og
+                    vedlikehold gjort av Påloggingsteamet.
                 </Heading>
                 <BodyShort>
                     Feedback og bugs kan rapporteres på slack på{' '}
-                    <a href="https://nrk.enterprise.slack.com/archives/C07TCLY8T2Q" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://nrk.enterprise.slack.com/archives/C07TCLY8T2Q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         #helsesjekk-bot
                     </a>
                 </BodyShort>
