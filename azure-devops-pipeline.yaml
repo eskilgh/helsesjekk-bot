@@ -16,6 +16,8 @@ pool:
 
 variables:
   - template: variables.yml@templateRepo
+  - name: versionPrefix
+    value: "0.0.1"
 
 stages:
   - stage: HelsesjekkBot
