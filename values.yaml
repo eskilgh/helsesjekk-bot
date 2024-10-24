@@ -68,7 +68,7 @@ environmentVariables:
     valueFrom:
       secretKeyRef:
         name: helsesjekk-slack
-        key: secret
+        key: signing-secret
   - name: SLACK_BOT_TOKEN
     valueFrom:
       secretKeyRef:
