@@ -26,6 +26,13 @@ stages:
         parameters:
           dotnet: 
             enabled: false
+          pnpm:
+            - script: yarn install
+              displayName: "Yarn install"
+            - script: yarn lint
+              displayName: "Yarn lint"
+            - script: yarn build
+              displayName: "Yarn build"
           environments:
             - name: test
               deployToEnvironment: true
